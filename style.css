@@ -1,0 +1,46 @@
+html {
+    background: rgba(0, 0, 0, 0) url("/users/christinefrezek/Documents/Sand_Dunes.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.start-section,
+.quiz-section,
+.results-section {
+    text-align: center;
+    background-color: lightgray;
+    opacity: 0.6;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    margin-bottom: 1rem;
+}
+
+.span-text {
+    padding: 2px;
+}
+
+button {
+    display: block;
+    height: 40px;
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.choices {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 60%;
+
+}
