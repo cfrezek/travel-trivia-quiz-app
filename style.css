@@ -1,56 +1,56 @@
 * {
-box-sizing: border-box;
-font-size: 1.5rem;
+    box-sizing: border-box;
+    font-size: 1.5rem;
 }
 
 html {
-background: rgba(0, 0, 0, 0) url("https://user-images.githubusercontent.com/33606317/52528281-be479180-2ca8-11e9-8890-f7169df77883.jpg") no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+    background: rgba(0, 0, 0, 0) url("https://user-images.githubusercontent.com/33606317/52528281-be479180-2ca8-11e9-8890-f7169df77883.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 header {
-padding: 25px;
+    padding: 25px;
 }
 
 h1 {
-text-align: center;
+    text-align: center;
 }
 
 .start-section,
 .quiz-section,
 .results-section {
-text-align: center;
-background-color: lightgray;
-opacity: 0.6;
-width: 50%;
-margin-left: auto;
-margin-right: auto;
-padding: 2rem;
-margin-bottom: 1rem;
+    text-align: center;
+    background-color: lightgray;
+    opacity: 0.6;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    margin-bottom: 1rem;
 }
 
 .span-text {
-padding: 2px;
+    padding: 2px;
 }
 
 button {
-display: block;
-height: 100px;
-width: 150px;
-margin-left: auto;
-margin-right: auto;
-background-color: darkgray;
-font-weight: bold;
+    display: block;
+    height: 100px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: darkgray;
+    font-weight: bold;
 
 }
 
 .choices {
-margin-left: auto;
-margin-right: auto;
-text-align: left;
-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: 100%;
 
 }

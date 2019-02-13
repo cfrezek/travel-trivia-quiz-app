@@ -1,3 +1,4 @@
+//Creating the question array
 var questionsArray = [
     //Question 1
     {
@@ -43,10 +44,10 @@ var questionsArray = [
 
     //Question 6
     {
-        questionText: 'What Scottish lake is home to a legendary monster?',
-        questionChoices: ['Awe', 'Ewe', 'Lomond', 'Ness'],
+        questionText: 'How high is the highest sand dune in Great Sand Dunes National Park?',
+        questionChoices: ['600 feet', '650 feet', '700 feet', '750 feet'],
         questionCorrectChoice: 3,
-        correctDetails: 'Ness'
+        correctDetails: '750 feet'
     },
 
     //Question 7
@@ -83,3 +84,16 @@ var questionsArray = [
 ];
 
 console.log(questionsArray);
+
+//Creating the variables for question number and correct //answers.
+let questionNum = 1;
+let correctAns = 0;
+
+//Create HTML form to add to screen when user clicks start
+
+//Function to handle start button - displays questions
+
+//Function to handle the submit button - iterate through //question set.
+
+
+//If answer is correct, display feedback, else display //correct answer.
