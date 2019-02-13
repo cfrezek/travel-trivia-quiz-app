@@ -1,11 +1,19 @@
+* {
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
 html {
-    background: rgba(0, 0, 0, 0) url("/users/christinefrezek/Documents/projects/travel-trivia-quiz-app/sand-dunes.jpg") no-repeat center center fixed;
+    background: rgba(0, 0, 0, 0) url("https://user-images.githubusercontent.com/33606317/52528281-be479180-2ca8-11e9-8890-f7169df77883.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 
+header {
+    padding: 25px;
+}
 
 h1 {
     text-align: center;
@@ -17,7 +25,7 @@ h1 {
     text-align: center;
     background-color: lightgray;
     opacity: 0.6;
-    width: 30%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     padding: 2rem;
@@ -30,10 +38,12 @@ h1 {
 
 button {
     display: block;
-    height: 40px;
-    width: 80px;
+    height: 100px;
+    width: 150px;
     margin-left: auto;
     margin-right: auto;
+    background-color: darkgray;
+    font-weight: bold;
 
 }
 
