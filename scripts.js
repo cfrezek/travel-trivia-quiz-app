@@ -113,7 +113,7 @@ startButton();
 $(document).ready(function () {
     $('.quiz-section').hide();
     $('.results-section').hide();
-    $('.start-section').show();
+    $('.start-section').hide();
 
 
 });
