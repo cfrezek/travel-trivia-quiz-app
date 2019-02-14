@@ -47,6 +47,10 @@ button {
 
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .choices {
     margin-left: auto;
     margin-right: auto;

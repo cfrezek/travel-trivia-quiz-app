@@ -1,6 +1,9 @@
+//Define global variables
+
 //Creating the question array
-var questionsArray = [
+let questionArray = [
     //Question 1
+
     {
         questionText: 'What city hosted the 2012 summer Olympic games?',
         questionChoices: ['Rio de Janeiro', 'London', 'Sydney', 'Beijing'],
@@ -80,20 +83,59 @@ var questionsArray = [
         questionChoices: ['48', '58', '68', '78'],
         questionCorrectChoice: 1,
         correctDetails: '58'
-    },
+    }
 ];
 
-console.log(questionsArray);
 
-//Creating the variables for question number and correct //answers.
+
+//Create the variables for question number and correct //answers.
 let questionNum = 1;
 let correctAns = 0;
 
-//Create HTML form to add to screen when user clicks start
+//Defining functions
+function nextQuestion() {
+    let question = questionArray[questionNum - 1];
+}
 
 //Function to handle start button - displays questions
+function startButton() {
+    $('.start-button').click(function (event) {
+        nextQuestion();
+    });
+}
+startButton();
 
 //Function to handle the submit button - iterate through //question set.
-
-
+//use prevent default
 //If answer is correct, display feedback, else display //correct answer.
+
+//Using functions (triggers)
+$(document).ready(function () {
+    $('.quiz-section').hide();
+    $('.results-section').hide();
+    $('.start-section').show();
+
+
+});
+
+$(document).on('click', '.start-button', function (event) {
+    event.preventDefault();
+    $('.quiz-section').show();
+    $('.results-section').hide();
+    $('.start-section').hide();
+});
+
+$(document).submit('.choices', function (event) {
+    event.preventDefault();
+    $('.quiz-section').hide();
+    $('.results-section').show();
+    $('.start-section').hide();
+
+});
+
+$(document).on('click', '#tryagain', function (event) {
+    event.preventDefault();
+    $('.quiz-section').hide();
+    $('.results-section').hide();
+    $('.start-section').show();
+});

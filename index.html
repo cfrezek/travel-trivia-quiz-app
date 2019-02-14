@@ -12,14 +12,16 @@
     <header class="title-section">
         <h1>Travel Trivia</h1>
     </header>
-    <section class="start-section">
-        <h2 class="text">How much do you know about popular travel destinations?<br><br>Take this quiz and find out!</h2>
-        <br>
-        <button class="start-button">Start</button>
-    </section>
-    <section class="quiz-section" style="display: none;">
+    <div id="container">
+        <section class="start-section">
+            <h2 class="text">How much do you know about popular travel destinations?<br><br>Take this quiz and find out!</h2>
+            <br>
+            <button class="start-button">Start</button>
+        </section>
+    </div>
+    <section class="quiz-section">
         <div>
-            <h1 class="text">What is the Melbourne Cup?</h1>
+            <h1 class="text" id="question">What is the Melbourne Cup?</h1>
             <form class="choices">
                 <label>
                     <input class="option" type="radio" value="0" name="option">
@@ -42,7 +44,8 @@
                     <span class="span-text">A tribute to the monarchy
                     </span>
                 </label><br><br>
-        </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
         </div>
         <br>
         <div class="question-number">Question: 1/10</div>
@@ -51,14 +54,14 @@
         </div>
 
     </section>
-    <section class="results-section" style="display: none;">
+    <section class="results-section">
         <h2 class="text"> Final Score </h2>
         <h3 class="text">10/10</h3>
         <div id="result_msg"></div>
         <button class="start-button" id="tryagain">Try Again</button>
     </section>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
