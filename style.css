@@ -19,26 +19,77 @@ h1 {
     text-align: center;
 }
 
-.start-section,
-.quiz-section,
-.results-section {
-    text-align: center;
-    background-color: lightgray;
-    opacity: 0.6;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: .5rem;
-    margin-bottom: rem;
+@media screen and (max-width: 799px) {
+
+    .start-section,
+    .quiz-section,
+    .results-section {
+        text-align: center;
+        background-color: lightgray;
+        opacity: 0.6;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .5rem;
+        margin-bottom: rem;
+    }
+
+    .correct-feedback-section,
+    .incorrect-feedback-section {
+        text-align: center;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: ;
+
+    }
+
+    .pisa {
+        max-height: 60%;
+        max-width: 75%;
+    }
+
+    .camel {
+        max-height: 80%;
+        max-width: 80%;
+    }
 }
 
-.feedback-section {
-    text-align: center;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: ;
+@media screen and (min-width: 800px) {
 
+
+    .start-section,
+    .quiz-section,
+    .results-section {
+        text-align: center;
+        background-color: lightgray;
+        opacity: 0.6;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: .5rem;
+        margin-bottom: rem;
+    }
+
+    .correct-feedback-section,
+    .incorrect-feedback-section {
+        text-align: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: ;
+
+    }
+
+    .pisa {
+        max-height: 40%;
+        max-width: 40%;
+    }
+
+    .camel {
+        max-height: 80%;
+        max-width: 80%;
+    }
 }
 
 .span-text {
@@ -58,6 +109,11 @@ button {
 
 button:hover {
     cursor: pointer;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
 }
 
 .choices {

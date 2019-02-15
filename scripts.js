@@ -17,7 +17,7 @@ let questionArray = [
         questionText: 'Which US president does not have his face carved on Mount Rushmore?',
         questionChoices: [' George Washington', 'Thomas Jefferson', 'Franklin Delano Roosevelt', 'Abraham Lincoln'],
         questionCorrectChoice: 2,
-        correctDetails: ' Franklin Delano Roosevelt is not on Mount Rushmore. It is actually Theodore Roosevelt.'
+        correctDetails: ' Franklin Delano Roosevelt'
     },
 
     //Question 3
@@ -113,7 +113,9 @@ startButton();
 $(document).ready(function () {
     $('.quiz-section').hide();
     $('.results-section').hide();
-    $('.start-section').hide();
+    $('.start-section').show();
+    $('.correct-feedback-section').hide();
+    $('.incorrect-feedback-section').hide();
 
 
 });
