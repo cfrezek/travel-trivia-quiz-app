@@ -91,19 +91,29 @@ let questionArray = [
 //Create the variables for question number and correct //answers.
 let questionNum = 1;
 let correctAns = 0;
+let currentQuestion = 4;
 
 //Defining functions
-function nextQuestion() {
-    let question = questionArray[questionNum - 1];
+function displayQuestion(currentQuestion) {
+    $('#question').text(questionArray[currentQuestion].questionText);
+    $('.choices').empty();
+    let numberofchoices = questionArray[currentQuestion].questionChoices.length;
+    for (let i = 0; i < numberofchoices; i++) {
+        let choiceHTML = `<label>
+            <input class="option" type="radio" value="${i}" name="option">
+<span class="span-text">${questionArray[currentQuestion].questionChoices[i]}
+                    </span>
+        </label><br><br>`;
+        $('.choices').append(choiceHTML);
+
+    }
+    $('.choices').append(`<button type="submit" class="submit-button">Submit</button>`);
+    $('.question-number').text(`Question:  ${(currentQuestion + 1)}  /${questionArray.length}`);
+    $('.number-correct').text(`Score:  ${correctAns}  /${questionArray.length}`);
 }
 
 //Function to handle start button - displays questions
-function startButton() {
-    $('.start-button').click(function (event) {
-        nextQuestion();
-    });
-}
-startButton();
+
 
 //Function to handle the submit button - iterate through //question set.
 //use prevent default
@@ -122,9 +132,13 @@ $(document).ready(function () {
 
 $(document).on('click', '.start-button', function (event) {
     event.preventDefault();
+    displayQuestion(currentQuestion);
     $('.quiz-section').show();
     $('.results-section').hide();
     $('.start-section').hide();
+    $('.correct-feedback-section').hide();
+    $('.incorrect-feedback-section').hide();
+
 });
 
 $(document).submit('.choices', function (event) {
@@ -140,4 +154,7 @@ $(document).on('click', '#tryagain', function (event) {
     $('.quiz-section').hide();
     $('.results-section').hide();
     $('.start-section').show();
+    $('.correct-feedback-section').hide();
+    $('.incorrect-feedback-section').hide();
+
 });
