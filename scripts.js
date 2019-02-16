@@ -91,7 +91,7 @@ let questionArray = [
 //Create the variables for question number and correct //answers.
 let questionNum = 1;
 let correctAns = 0;
-let currentQuestion = 4;
+let currentQuestion = 0;
 
 //Defining functions
 function displayQuestion(currentQuestion) {
