@@ -88,10 +88,10 @@ let questionArray = [
 
 
 
-//Create the variables for question number and correct //answers.
+//Create the variables for question number and correct answers.
 let questionNum = 1;
 let correctAns = 0;
-let currentQuestion = 0;
+let currentQuestion = 4;
 
 //Defining functions
 function displayQuestion(currentQuestion) {
@@ -103,29 +103,38 @@ function displayQuestion(currentQuestion) {
             <input class="option" type="radio" value="${i}" name="option">
 <span class="span-text">${questionArray[currentQuestion].questionChoices[i]}
                     </span>
-        </label><br><br>`;
+        </label><br>`;
         $('.choices').append(choiceHTML);
-
     }
-    $('.choices').append(`<button type="submit" class="submit-button">Submit</button>`);
+    $('.choices').append(`<br><button type="submit" class="submit-button">Submit</button>`);
     $('.question-number').text(`Question:  ${(currentQuestion + 1)}  /${questionArray.length}`);
     $('.number-correct').text(`Score:  ${correctAns}  /${questionArray.length}`);
 }
 
-//Function to handle start button - displays questions
+function checkUserAnswer(currentQuestion) {
+    let userAnswer = $("input[class='option']:checked").val();
+    let correctAnswer = questionArray[currentQuestion - 1].questionCorrectChoice;
+    console.log(userAnswer, correctAnswer);
+    if (userAnswer == correctAnswer) {
+        correctAns++;
+        $('.feedback-text').text(`That's correct!`);
+        $('.feedback-image').attr("src", "smiling-camel-1385079-639x424.jpg");
+    } else {
+        $('.feedback-text').text(`Not quite. The correct answer is ${questionArray[currentQuestion].correctDetails}.`);
+        $('.feedback-image').attr("src", "pisa-1-1570127-639x852.jpg");
+    }
+    $('.feedback-section').show();
+
+}
 
 
-//Function to handle the submit button - iterate through //question set.
-//use prevent default
-//If answer is correct, display feedback, else display //correct answer.
 
 //Using functions (triggers)
 $(document).ready(function () {
     $('.quiz-section').hide();
     $('.results-section').hide();
     $('.start-section').show();
-    $('.correct-feedback-section').hide();
-    $('.incorrect-feedback-section').hide();
+    $('.feedback-section').hide();
 
 
 });
@@ -136,15 +145,16 @@ $(document).on('click', '.start-button', function (event) {
     $('.quiz-section').show();
     $('.results-section').hide();
     $('.start-section').hide();
-    $('.correct-feedback-section').hide();
-    $('.incorrect-feedback-section').hide();
+    $('.feedback-section').hide();
+
 
 });
 
 $(document).submit('.choices', function (event) {
     event.preventDefault();
+    checkUserAnswer(currentQuestion)
     $('.quiz-section').hide();
-    $('.results-section').show();
+    $('.results-section').hide();
     $('.start-section').hide();
 
 });
@@ -154,7 +164,7 @@ $(document).on('click', '#tryagain', function (event) {
     $('.quiz-section').hide();
     $('.results-section').hide();
     $('.start-section').show();
-    $('.correct-feedback-section').hide();
-    $('.incorrect-feedback-section').hide();
+    $('.feedback-section').hide();
+
 
 });
