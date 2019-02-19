@@ -70,8 +70,7 @@ h1 {
         margin-bottom: rem;
     }
 
-    .correct-feedback-section,
-    .incorrect-feedback-section {
+    .feedback-section {
         text-align: center;
         width: 50%;
         margin-left: auto;
@@ -82,7 +81,7 @@ h1 {
 
 
 
-    .pisa {
+    .feedback-image {
         max-height: 40%;
         max-width: 40%;
     }
