@@ -91,7 +91,7 @@ let questionArray = [
 //Create the variables for question number and correct answers.
 let questionNum = 1;
 let correctAns = 0;
-let currentQuestion = 4;
+let currentQuestion = 0;
 
 //Defining functions
 function displayQuestion(currentQuestion) {
@@ -113,7 +113,7 @@ function displayQuestion(currentQuestion) {
 
 function checkUserAnswer(currentQuestion) {
     let userAnswer = $("input[class='option']:checked").val();
-    let correctAnswer = questionArray[currentQuestion - 1].questionCorrectChoice;
+    let correctAnswer = questionArray[currentQuestion].questionCorrectChoice;
     console.log(userAnswer, correctAnswer);
     if (userAnswer == correctAnswer) {
         correctAns++;
@@ -146,9 +146,8 @@ $(document).on('click', '.start-button', function (event) {
     $('.results-section').hide();
     $('.start-section').hide();
     $('.feedback-section').hide();
-
-
 });
+
 
 $(document).submit('.choices', function (event) {
     event.preventDefault();
@@ -156,8 +155,17 @@ $(document).submit('.choices', function (event) {
     $('.quiz-section').hide();
     $('.results-section').hide();
     $('.start-section').hide();
-
 });
+
+$(document).on('click', '.next-button', function (event) {
+    event.preventDefault();
+    displayQuestion(currentQuestion);
+    $('.quiz-section').show();
+    $('.results-section').hide();
+    $('.start-section').hide();
+    $('.feedback-section').hide();
+});
+
 
 $(document).on('click', '#tryagain', function (event) {
     event.preventDefault();
@@ -165,6 +173,5 @@ $(document).on('click', '#tryagain', function (event) {
     $('.results-section').hide();
     $('.start-section').show();
     $('.feedback-section').hide();
-
 
 });
