@@ -1,3 +1,4 @@
+'use strict';
 //Define global variables
 
 //Creating the question array
@@ -115,6 +116,7 @@ function checkUserAnswer(currentQuestion) {
     let userAnswer = $("input[class='option']:checked").val();
     let correctAnswer = questionArray[currentQuestion].questionCorrectChoice;
     console.log(userAnswer, correctAnswer);
+    console.log(currentQuestion);
     if (userAnswer == correctAnswer) {
         correctAns++;
         $('.feedback-text').text(`That's correct!`);
@@ -125,7 +127,10 @@ function checkUserAnswer(currentQuestion) {
     }
     $('.feedback-section').show();
 
+    console.log(currentQuestion);
 }
+
+
 
 
 
@@ -160,10 +165,12 @@ $(document).submit('.choices', function (event) {
 $(document).on('click', '.next-button', function (event) {
     event.preventDefault();
     displayQuestion(currentQuestion);
+    console.log(currentQuestion);
     $('.quiz-section').show();
     $('.results-section').hide();
     $('.start-section').hide();
     $('.feedback-section').hide();
+    nextButton();
 });
 
 
@@ -173,5 +180,6 @@ $(document).on('click', '#tryagain', function (event) {
     $('.results-section').hide();
     $('.start-section').show();
     $('.feedback-section').hide();
-
+    currentQuestion = 0;
+    correctAns = 0;
 });
