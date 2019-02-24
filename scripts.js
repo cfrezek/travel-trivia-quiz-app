@@ -129,9 +129,24 @@ function checkUserAnswer(currentQuestion) {
 
     console.log(currentQuestion);
 }
+/*
+function nextButton() {
+    $('.next-button').on('click', function (event) {
+        if (currentQuestion == questionArray.length) {
+            createResultsPage(correctAns);
+        } else {
 
+        }
+    });
+}*/
 
-
+function iterateQuestions() {
+    currentQuestion++;
+}
+/*
+function createResultsPage(correctAns) {
+    alert("this works");
+}*/
 
 
 //Using functions (triggers)
@@ -164,13 +179,15 @@ $(document).submit('.choices', function (event) {
 
 $(document).on('click', '.next-button', function (event) {
     event.preventDefault();
+    iterateQuestions();
     displayQuestion(currentQuestion);
+    nextButton();
     console.log(currentQuestion);
     $('.quiz-section').show();
     $('.results-section').hide();
     $('.start-section').hide();
     $('.feedback-section').hide();
-    nextButton();
+
 });
 
 
