@@ -135,6 +135,8 @@ function nextButton() {
         if (currentQuestion == questionArray.length) {
             createResultsPage(correctAns);
         } else {
+            iterateQuestions();
+            displayQuestion(currentQuestion);
 
         }
     });
@@ -181,8 +183,6 @@ $(document).on('click', '.next-button', function (event) {
     event.preventDefault();
     iterateQuestions();
     displayQuestion(currentQuestion);
-    nextButton();
-    console.log(currentQuestion);
     $('.quiz-section').show();
     $('.results-section').hide();
     $('.start-section').hide();
