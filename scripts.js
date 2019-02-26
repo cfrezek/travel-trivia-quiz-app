@@ -26,7 +26,7 @@ let questionArray = [
         questionText: ' As of fall 2016, approximately how many bison lived in Yellowstone National Park?',
         questionChoices: ['1000', '3000', '5000', '7000'],
         questionCorrectChoice: 2,
-        correctDetails: '5000’'
+        correctDetails: '5000'
     },
 
     //Question 4
