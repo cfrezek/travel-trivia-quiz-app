@@ -101,7 +101,7 @@ function displayQuestion(currentQuestion) {
     let numberofchoices = questionArray[currentQuestion].questionChoices.length;
     for (let i = 0; i < numberofchoices; i++) {
         let choiceHTML = `<label>
-            <input class="option" type="radio" value="${i}" name="option">
+            <input class="option" type="radio" value="${i}" name="option" required>
 <span class="span-text">${questionArray[currentQuestion].questionChoices[i]}
                     </span>
         </label><br>`;
