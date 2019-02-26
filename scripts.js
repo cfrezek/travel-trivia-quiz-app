@@ -73,9 +73,9 @@ let questionArray = [
     //Question 9
     {
         questionText: 'What is the Melbourne Cup?',
-        questionChoices: ['A popular bar in Australia', 'A horse race', 'A piece of Aboriginal art', 'A tribute to the monarchy'],
+        questionChoices: ['Australian bar', 'horse race', 'Aboriginal art', 'A tribute to the monarchy'],
         questionCorrectChoice: 1,
-        correctDetails: 'A horse race'
+        correctDetails: 'horse race'
     },
 
     //Question 10
@@ -120,10 +120,10 @@ function checkUserAnswer(currentQuestion) {
     if (userAnswer == correctAnswer) {
         correctAns++;
         $('.feedback-text').text(`That's correct!`);
-        $('.feedback-image').attr("src", "smiling-camel-1385079-639x424.jpg");
+        $('.feedback-image').attr("src", "smiling-camel-1385079-639x424.jpg").attr("alt", "smiling camel");
     } else {
         $('.feedback-text').text(`Not quite. The correct answer is ${questionArray[currentQuestion].correctDetails}.`);
-        $('.feedback-image').attr("src", "pisa-1-1570127-639x852.jpg");
+        $('.feedback-image').attr("src", "pisa-1-1570127-639x852.jpg").attr("alt", "leaning tower of Pisa");
     }
     $('.feedback-section').show();
 

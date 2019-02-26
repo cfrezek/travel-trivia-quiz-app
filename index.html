@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=en>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -12,69 +12,65 @@
     <header class="title-section">
         <h1>Travel Trivia</h1>
     </header>
-    <div id="container">
+    <main role="main">
         <section class="start-section">
             <h2 class="text">How much do you know about popular travel destinations?<br><br>Take this quiz and find out!</h2>
             <br>
             <button class="start-button">Start</button>
         </section>
-    </div>
-    <section class="quiz-section">
-        <div>
-            <h1 class="text" id="question">What is the Melbourne Cup?</h1>
-            <form class="choices">
-                <label>
-                    <input class="option" type="radio" value="0" name="option" required>
-                    <span class="span-text">
-                        A popular bar in Australia
-                    </span><br>
-                </label>
-                <label>
-                    <input class="option" type="radio" value="1" name="option" required>
-                    <span class="span-text">A horse race
-                    </span><br>
-                </label>
-                <label>
-                    <input class="option" type="radio" value="2" name="option" required>
-                    <span class="span-text">A piece of Aboriginal art
-                    </span>
-                </label><br>
-                <label>
-                    <input class="option" type="radio" value="3" name="option" required>
-                    <span class="span-text">A tribute to the monarchy
-                    </span>
-                </label><br><br>
-                <button type="submit" class="submit-button">Submit</button>
-            </form>
-        </div>
-        <br>
-        <div class="status-bar">
-            <span class="question-number">
-                Question: 1/10
-            </span>
-            <span class="number-correct">
-                Score: 0/0
-            </span>
-        </div>
+        <section class="quiz-section">
+            <div>
+                <h1 class="text" id="question">What is the Melbourne Cup?</h1>
+                <form class="choices">
+                    <label>
+                        <input class="option" type="radio" value="0" name="option" required>
+                        <span class="span-text">
 
-    </section>
-    <section class="feedback-section">
-        <span>
-            <h2 class="feedback-text">That's correct!
-            </h2>
-
-            <img class="feedback-image" src="smiling-camel-1385079-639x424.jpg" alt="smiling camel">
-
+                        </span><br>
+                    </label>
+                    <label>
+                        <input class="option" type="radio" value="1" name="option" required>
+                        <span class="span-text">
+                        </span><br>
+                    </label>
+                    <label>
+                        <input class="option" type="radio" value="2" name="option" required>
+                        <span class="span-text">
+                        </span>
+                    </label><br>
+                    <label>
+                        <input class="option" type="radio" value="3" name="option" required>
+                        <span class="span-text">
+                        </span>
+                    </label><br><br>
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+            </div>
             <br>
-            <button class="next-button">Next</button>
-        </span>
-    </section>
-    <section class="results-section">
-        <h2 class="text"> Final Score </h2>
-        <h3 class="results-text">10/10</h3>
-        <div id="result_msg"></div>
-        <button class="start-button" id="tryagain">Try Again</button>
-    </section>
+            <div class="status-bar">
+                <span class="question-number">
+                    Question: 1/10
+                </span>
+                <span class="number-correct">
+                    Score: 0/0
+                </span>
+            </div>
+        </section>
+        <section class="feedback-section">
+            <span>
+                <h2 class="feedback-text">That's correct!
+                </h2>
+                <img class="feedback-image" src="smiling-camel-1385079-639x424.jpg" alt="smiling camel">
+                <br>
+                <button class="next-button">Next</button>
+            </span>
+        </section>
+        <section class="results-section">
+            <h2 class="text"> Final Score </h2>
+            <h3 class="results-text">10/10</h3>
+            <button class="start-button" id="tryagain">Try Again</button>
+        </section>
+    </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="scripts.js"></script>
 </body>
