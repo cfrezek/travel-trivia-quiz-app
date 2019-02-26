@@ -90,7 +90,7 @@ let questionArray = [
 
 
 //Create the variables for question number and correct answers.
-let questionNum = 1;
+
 let correctAns = 0;
 let currentQuestion = 0;
 
@@ -129,26 +129,17 @@ function checkUserAnswer(currentQuestion) {
 
     console.log(currentQuestion);
 }
-/*
-function nextButton() {
-    $('.next-button').on('click', function (event) {
-        if (currentQuestion == questionArray.length) {
-            createResultsPage(correctAns);
-        } else {
-            iterateQuestions();
-            displayQuestion(currentQuestion);
 
-        }
-    });
-}*/
 
 function iterateQuestions() {
     currentQuestion++;
 }
-/*
+
 function createResultsPage(correctAns) {
-    alert("this works");
-}*/
+    $('.feedback-section').hide();
+    $('.results-section').show();
+    $('.results-text').text(`${correctAns}/10`);
+}
 
 
 //Using functions (triggers)
@@ -181,13 +172,17 @@ $(document).submit('.choices', function (event) {
 
 $(document).on('click', '.next-button', function (event) {
     event.preventDefault();
-    iterateQuestions();
-    displayQuestion(currentQuestion);
-    $('.quiz-section').show();
-    $('.results-section').hide();
-    $('.start-section').hide();
-    $('.feedback-section').hide();
+    if (currentQuestion < 9) {
+        iterateQuestions();
+        displayQuestion(currentQuestion);
 
+        $('.quiz-section').show();
+        $('.results-section').hide();
+        $('.start-section').hide();
+        $('.feedback-section').hide();
+    } else {
+        createResultsPage(correctAns);
+    }
 });
 
 
