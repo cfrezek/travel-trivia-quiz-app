@@ -19,7 +19,21 @@ h1 {
     text-align: center;
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 319px) {
+    #tryagain {
+        height: 120px;
+        width: 100%;
+    }
+
+    .start-section,
+    .quiz-section,
+    .results-section {
+        width: 90%;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 799px) {
 
     .start-section,
     .quiz-section,
